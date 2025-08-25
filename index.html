@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador</title>
     <style>
-        img{
-            position: fixed;
-            bottom: 0;
-            left: 0;
-             width: 100%; 
-             height: auto; 
-             max-height: 300px;
-            
-        }
+        img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+@media (max-width: 600px) {
+    img {
+        max-height: 200px;  /* Para telas pequenas, diminuir um pouco a altura */
+    }
+}
+
         body {
     background-color: rgb(82, 82, 82);
     min-height: 100vh;
@@ -40,6 +46,9 @@ button{
      }
      button{
         font-size: 20px;
+     }
+     *{
+        box-sizing: border-box;
      }
     </style>
 </head>
