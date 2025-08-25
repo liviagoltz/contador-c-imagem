@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        img{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 400px;
+            
+        }
+        body {
+    background-color: rgb(82, 82, 82);
+    min-height: 100vh;
+
+    display: flex;           
+    justify-content: center;  
+    align-items: center;       
+}
+section {
+    background: rgb(235, 174, 44);   
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+button{
+    background-color: rgb(224, 154, 24);
+}
+        p{
+            font-size: 90px;
+            margin: 25px;
+        }
+     h1{
+        font-size: 50px;
+     }
+     button{
+        font-size: 20px;
+     }
+    </style>
+</head>
+<body>
+    <section>
+    <h1>Contador</h1>
+    <p>0</p>
+    <button onclick="aumentar()">Mais</button>
+    <button onclick="zerar()">Zerar</button>
+    <button onclick="diminuir()">Menos</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    </section>
+    <script>
+        let numero = 0
+
+        function aumentar(){
+            numero = numero +1
+            render()
+        }
+          function zerar(){
+            numero = numero - numero
+            render()
+        }
+          function diminuir(){
+            numero = numero -1
+            render()
+        }
+          function dividir(){
+            numero = numero /2
+            render()
+        }
+          function multiplicar(){
+            numero = numero + numero
+            render()
+        }
+          function render(){
+            const p = document.querySelector("p")
+            p.innerText = numero
+        }
+        render()
+    </script>
+
+    <img src="imagem/Daffy_Duck.webp" alt="pato">
+</body>
+</html>
